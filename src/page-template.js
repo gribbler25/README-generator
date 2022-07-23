@@ -1,47 +1,46 @@
 module.exports = generateMarkdown;
-
+const renderLicenseSection = require("../utils/generateMarkdown.js");
 function generateMarkdown(Obj) {
   console.log(Obj);
   return `
-  <html lang='en'>
-  <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${Obj.title}</title>
-</head>
-    <h2>Project Description:</h2>
+ 
+  # ${Obj.title}
+
+## Project Description:
    <p> ${Obj.description}</p>
   
-   <h2>Table of Contents:</h2>
-   <ul>
-   <li>Installation</li>
-   <li>Instrucitons for use</li>
-   <li>Testing</li>
-   <li>License information</li>
-   <li>Contribute</li>
-   <li>Questions/collaborate </li>
-    </ul>
-    </html>
-  
-<h2> Installation Instruction:</h2>
+ ## Table of Contents:
+   
+ * <a href="#install">Installation</a>
+
+ * <a href="#inst">Instrucitons for use</a>
+
+ * <a href="#test">Testing</a>
+
+ * <a href="#lic">License information</a>
+
+ * <a href="#cont">Contribute</a>
+ 
+ * <a href="#coll">Questions/collaborate </a>
+    
+<h2 id=install> Installation Instruction:</h2>
   ${Obj.installation}
   
-  <h2>Instructions for use:</h2>
+## Instructions for use:
   ${Obj.usage}
   
-  <h2>Testing instructions:</h2>
+## Testing instructions:
   ${Obj.tests}
   
-  <h2>License:</h2>
-  ${Obj.license}
+ <section id="lic"> ${renderLicenseSection}</section>
   
-  <h2>Contribution guidelines:</h2>
+## Contribution guidelines:
   ${Obj.contributing}
   
   <footer>
   <h3> Reach out with questions or to collaborate:<h3>
-  * ${Obj.username}
-  * ${Obj.email}
+
+  <a href="github.com/${Obj.username}">${Obj.username}</a>
+  <a href="mailto:${Obj.email}">${Obj.email}</a>
   </footer>`;
 }

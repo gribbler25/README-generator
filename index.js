@@ -84,7 +84,7 @@ const promptQuestions = () => {
       name: "usage",
       message: "Please provide instructions for use.",
       default:
-        "To use this node application user simply runs with 'node index.js' command at the command line and answers the questions until the readme.md file is created. Next, the user can open the file in the browser to preview and can attack this file to any project they may be working on.",
+        "To use this node application user simply runs with 'node index.js' command at the command line and answers the questions until the readme.md file is created. Next, the user can open the file in the browser to preview and can attach this file to any project they may be working on.",
       validate: (nameInput) => {
         if (nameInput) {
           return true;
@@ -130,7 +130,7 @@ const promptQuestions = () => {
       type: "list",
       name: "license",
       message: "Choose a license for this project (choose one)",
-      choices: ["creative commons", "MIT", "public data", "IBM"],
+      choices: ["creative-commons", "MIT", "IBM"],
     },
   ]);
 };
@@ -146,21 +146,8 @@ promptQuestions().then((answersObj) => {
   });
 });
 
-// TODO: Create a function to write README file
-// const writeToFile = function () {
-//   fs.writeFile("readme.md", generateMarkdown, (err) => {
-//     if (err) throw err;
-//     console.log("The file has been saved!");
-//   });
-//};
 //   fs.appendFile("message.txt", "data to append", (err) => {
 //     if (err) throw err;
 //     console.log('The "data to append" was appended to file!');
 //   });
 // }
-
-// TODO: Create a function to initialize app ??
-//function init() {}
-
-// Function call to initialize app
-// init();
