@@ -4,9 +4,7 @@ const renderLicenseBadge = (license) => {
   if (!license) {
     return "";
   } else if ("MIT") {
-    return `
-    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-    `;
+    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
   } else if ("creative - commons") {
     return `
   [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
@@ -23,11 +21,9 @@ const renderLicenseBadge = (license) => {
 const renderLicenseLink = (license) => {
   if (!license) {
     return "";
-  } else if (MIT) {
-    return `
-    <a href="https://choosealicense.com/licenses/mit/">MIT License</a>
-    `;
-  } else if (creative - commons) {
+  } else if ("MIT") {
+    return `https://choosealicense.com/licenses/mit`;
+  } else if ("creative - commons") {
     return `
   <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons License</a>
     `;
@@ -43,9 +39,12 @@ const renderLicenseLink = (license) => {
 const renderLicenseSection = (license) => {
   if (!license) {
     return "";
+  } else if ("MIT") {
+    return `MIT License`;
+  } else if ("creative - commons") {
+    return `Creative Commons License`;
   } else {
-    return `${renderLicenseBadge}
-      ${renderLicenseLink}`;
+    return `IBM License`;
   }
 };
 module.exports = {

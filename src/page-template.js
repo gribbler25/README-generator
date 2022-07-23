@@ -18,10 +18,11 @@ function generateMarkdown({
   email,
 }) {
   const lic = renderLicenseBadge(license);
-
+  const link = renderLicenseLink(license);
+  const licenseAgree = renderLicenseSection(license);
   return `
  
-  # ${title}   ${lic}
+  # ${title}            ${lic}
 
 
 ## Project Description:
@@ -55,17 +56,17 @@ function generateMarkdown({
 
   <h2 id="test"> Testing instructions:</h2>
   ${tests}
-  
+
   </br>
 
-  <h2 id="lic">  ${renderLicenseSection}</h2>
-  
-  </br>
 
  <h2 id="cont"> Contribution guidelines:</h2>
   <a href="${contributing}">  Click here for contribution guidelines </a>
+  </br>
+  <a href="${link}">${licenseAgree}</a>
   
   </br>
+
 
   <footer>
   <h2 id="coll"> Reach out with questions or to collaborate:<h2>

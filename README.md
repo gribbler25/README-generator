@@ -1,8 +1,6 @@
 
  
-  # Create a README   
-    "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
-    
+  # Create a README            [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 ## Project Description:
@@ -36,24 +34,17 @@
 
   <h2 id="test"> Testing instructions:</h2>
   To test this application, simply run 'node index' from the command line and if error follow error code instructions
-  
+
   </br>
 
-  <h2 id="lic">  (license) => {
-  if (!license) {
-    return "";
-  } else {
-    return `${renderLicenseBadge}
-      ${renderLicenseLink}`;
-  }
-}</h2>
-  
-  </br>
 
  <h2 id="cont"> Contribution guidelines:</h2>
   <a href="https://www.contributor-covenant.org">  Click here for contribution guidelines </a>
+  </br>
+  <a href="https://choosealicense.com/licenses/mit">MIT License</a>
   
   </br>
+
 
   <footer>
   <h2 id="coll"> Reach out with questions or to collaborate:<h2>
