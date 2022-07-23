@@ -13,17 +13,20 @@ function generateMarkdown({
   usage,
   tests,
   contributing,
+  license,
   username,
   email,
 }) {
+  const lic = renderLicenseBadge(license);
+
   return `
  
-  # ${title}
+  # ${title}   ${lic}
 
 
 ## Project Description:
-   <p> ${description}</p>
-  
+   ${description}  
+  </br>
  ## Table of Contents:
    
  * <a href="#install">Installation</a>
@@ -38,36 +41,36 @@ function generateMarkdown({
  
  * <a href="#coll">Questions/collaborate </a>
     
-
+ </br>
 
 <h2 id="install"> Installation Instruction:</h2>
   ${installation}
   
-
+  </br>
 
   <h2 id="inst"> Instructions for use:</h2>
   ${usage}
   
-
+  </br>
 
   <h2 id="test"> Testing instructions:</h2>
   ${tests}
   
-
+  </br>
 
   <h2 id="lic">  ${renderLicenseSection}</h2>
   
+  </br>
 
-  
  <h2 id="cont"> Contribution guidelines:</h2>
-  <a href="${contributing}">  click for contribution guidelines </a>
+  <a href="${contributing}">  Click here for contribution guidelines </a>
   
-
+  </br>
 
   <footer>
   <h2 id="coll"> Reach out with questions or to collaborate:<h2>
 
-  <a href="github.com/${username}">GitHub:  ${username}</a>
+  <a href="https://github.com/${username}">GitHub:  ${username}</a>
 
   <a href="mailto:${email}">${email}</a>
   </footer>`;

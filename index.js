@@ -128,10 +128,23 @@ const promptQuestions = () => {
       },
     },
     {
+      type: "confirm",
+      name: "confirmLicense",
+      message: "Would you like to include a license section and badge?",
+      default: true,
+    },
+    {
       type: "list",
       name: "license",
       message: "Choose a license for this project (choose one)",
       choices: ["creative-commons", "MIT", "IBM"],
+      when: ({ confirmLicense }) => {
+        if (confirmLicense) {
+          return true;
+        } else {
+          return false;
+        }
+      },
     },
   ]);
 };
