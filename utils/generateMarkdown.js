@@ -25,7 +25,7 @@ function renderLicenseLink(license) {
     return "";
   } else if (MIT) {
     return `
-    <a href="https://opensource.org/licenses/MIT">MIT License</a>
+    <a href="https://choosealicense.com/licenses/mit/">MIT License</a>
     `;
   } else if (creative - commons) {
     return `
@@ -48,6 +48,8 @@ function renderLicenseSection(license) {
       ${renderLicenseLink}`;
   }
 }
-module.exports = renderLicenseSection;
-module.exports = renderLicenseBadge;
-module.exports = renderLicenseLink;
+module.exports = {
+  renderLicenseBadge,
+  renderLicenseLink,
+  renderLicenseSection,
+};

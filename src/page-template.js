@@ -1,13 +1,28 @@
 module.exports = generateMarkdown;
-const renderLicenseSection = require("../utils/generateMarkdown.js");
-function generateMarkdown(Obj) {
-  console.log(Obj);
+
+const {
+  renderLicenseBadge,
+  renderLicenseLink,
+  renderLicenseSection,
+} = require("../utils/generateMarkdown.js");
+
+function generateMarkdown({
+  title,
+  description,
+  installation,
+  usage,
+  tests,
+  contributing,
+  username,
+  email,
+}) {
   return `
  
-  # ${Obj.title}
+  # ${title}
+
 
 ## Project Description:
-   <p> ${Obj.description}</p>
+   <p> ${description}</p>
   
  ## Table of Contents:
    
@@ -23,24 +38,37 @@ function generateMarkdown(Obj) {
  
  * <a href="#coll">Questions/collaborate </a>
     
-<h2 id=install> Installation Instruction:</h2>
-  ${Obj.installation}
-  
-## Instructions for use:
-  ${Obj.usage}
-  
-## Testing instructions:
-  ${Obj.tests}
-  
- <section id="lic"> ${renderLicenseSection}</section>
-  
-## Contribution guidelines:
-  ${Obj.contributing}
-  
-  <footer>
-  <h3> Reach out with questions or to collaborate:<h3>
 
-  <a href="github.com/${Obj.username}">${Obj.username}</a>
-  <a href="mailto:${Obj.email}">${Obj.email}</a>
+
+<h2 id="install"> Installation Instruction:</h2>
+  ${installation}
+  
+
+
+  <h2 id="inst"> Instructions for use:</h2>
+  ${usage}
+  
+
+
+  <h2 id="test"> Testing instructions:</h2>
+  ${tests}
+  
+
+
+  <h2 id="lic">  ${renderLicenseSection}</h2>
+  
+
+  
+ <h2 id="cont"> Contribution guidelines:</h2>
+  <a href="${contributing}">  click for contribution guidelines </a>
+  
+
+
+  <footer>
+  <h2 id="coll"> Reach out with questions or to collaborate:<h2>
+
+  <a href="github.com/${username}">GitHub:  ${username}</a>
+
+  <a href="mailto:${email}">${email}</a>
   </footer>`;
 }

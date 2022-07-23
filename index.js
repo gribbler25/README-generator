@@ -69,12 +69,12 @@ const promptQuestions = () => {
       name: "installation",
       message: "Enter your project installation instructions.",
       default:
-        "This project uses Node.js at the command line. User must clone the files into their local dev environment, run 'npm init' at the command line for access to inquirer package, install inquirer with 'npm install --save inquirer' command, then run by command 'node index.js' to check if dependencies are working with the command line questions generating the markdown file called 'readme.md'.",
+        "This project uses Node.js at the command line. Clone the repo to a directory then in your local IDE use command 'npm install' on comand line for the correct packages to install on your machine, then run the command 'node index.js' to check if dependencies are working with the command line questions generating the markdown file called 'readme.md'.",
       validate: (nameInput) => {
         if (nameInput) {
           return true;
         } else {
-          console.log("Please enter installation instruc=tions!");
+          console.log("Please enter installation instructions!");
           return false;
         }
       },
@@ -84,7 +84,7 @@ const promptQuestions = () => {
       name: "usage",
       message: "Please provide instructions for use.",
       default:
-        "To use this node application user simply runs with 'node index.js' command at the command line and answers the questions until the readme.md file is created. Next, the user can open the file in the browser to preview and can attach this file to any project they may be working on.",
+        "Simply run 'node index.js' command at the command line and answer the questions until the readme.md file is created. Next, Preview the file by right-click on the readme.md file in VScode explorer and copy this file to any relavant project you may be working on.",
       validate: (nameInput) => {
         if (nameInput) {
           return true;
@@ -97,14 +97,15 @@ const promptQuestions = () => {
     {
       type: "input",
       name: "contributing",
-      message: "Provide guidelines for contributing to this project.",
-      default:
-        "see https://www.contributor-covenant.org/ for contribution code of conduct",
+      message: "Provide a link to guidelines for contributing to this project.",
+      default: "https://www.contributor-covenant.org",
       validate: (nameInput) => {
         if (nameInput) {
           return true;
         } else {
-          console.log("Please provide contibution guidelines or a link!");
+          console.log(
+            "Please provide a contibution guidelines link!('https://www.contributor-covenant.org/') is an industry standard"
+          );
           return false;
         }
       },
