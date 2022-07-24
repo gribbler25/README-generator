@@ -3,16 +3,12 @@
 const renderLicenseBadge = (license) => {
   if (!license) {
     return "";
-  } else if ("MIT") {
+  } else if (license === "MIT") {
     return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
-  } else if ("creative - commons") {
-    return `
-  [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-    `;
+  } else if (license === "creative-commons") {
+    return `[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)`;
   } else {
-    return `
-    [![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)
-    `;
+    return `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`;
   }
 };
 
@@ -21,16 +17,12 @@ const renderLicenseBadge = (license) => {
 const renderLicenseLink = (license) => {
   if (!license) {
     return "";
-  } else if ("MIT") {
+  } else if (license === "MIT") {
     return `https://choosealicense.com/licenses/mit`;
-  } else if ("creative - commons") {
-    return `
-  <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons License</a>
-    `;
+  } else if (license === "creative - commons") {
+    return `https://creativecommons.org/licenses/by/4.0/`;
   } else {
-    return `
-    <a href="https://opensource.org/licenses/IPL-1.0">IBM License</a>
-    `;
+    return `https://opensource.org/licenses/IPL-1.0`;
   }
 };
 
@@ -39,9 +31,9 @@ const renderLicenseLink = (license) => {
 const renderLicenseSection = (license) => {
   if (!license) {
     return "";
-  } else if ("MIT") {
+  } else if (license === "MIT") {
     return `MIT License`;
-  } else if ("creative - commons") {
+  } else if (license === "creative-commons") {
     return `Creative Commons License`;
   } else {
     return `IBM License`;
