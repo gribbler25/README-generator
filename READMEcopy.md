@@ -33,7 +33,7 @@
   </br>
 
   <h2 id="test"> Testing instructions:</h2>
-  To test this application, simply run 'node index' from the command line, answer question prompts, and if error follow error code instructions
+  To test this application, simply run 'node index' from the command line and if error follow error code instructions
 
   </br>
 
