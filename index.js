@@ -10,7 +10,7 @@ const promptQuestions = () => {
       type: "input",
       name: "username",
       message: "What is your GitHub username?",
-      // default: "gribbler25",
+      default: "gribbler25",
       validate: (nameInput) => {
         if (nameInput) {
           return true;
@@ -24,7 +24,7 @@ const promptQuestions = () => {
       type: "input",
       name: "email",
       message: "Provide an email where you can be reached with questions",
-      // default: "gribbler25@yahoo.com",
+      default: "gribbler25@yahoo.com",
       validate: (nameInput) => {
         if (nameInput) {
           return true;
@@ -39,7 +39,7 @@ const promptQuestions = () => {
       type: "input",
       name: "title",
       message: "What is the title of your project?",
-      // default: "Create a README",
+      default: "Create a README",
       validate: (nameInput) => {
         if (nameInput) {
           return true;
@@ -53,8 +53,8 @@ const promptQuestions = () => {
       type: "input",
       name: "description",
       message: "Enter your project description.",
-      // default:
-      //   "This project is about creating a simple question/answer format at the command line to gather user data for the creation of a professional comprehesive README file for any project.",
+      default:
+        "This project is about creating a simple question/answer format at the command line to gather user data for the creation of a professional comprehesive README file for any project.",
       validate: (nameInput) => {
         if (nameInput) {
           return true;
@@ -68,8 +68,8 @@ const promptQuestions = () => {
       type: "input",
       name: "installation",
       message: "Enter your project installation instructions.",
-      // default:
-      //   "This project uses Node.js at the command line. Clone the repo to a directory then in your local IDE use command 'npm install' on comand line for the correct packages to install on your machine, then run the command 'node index.js' to check if dependencies are working with the command line questions generating the markdown file called 'readme.md'.",
+      default:
+        "This project uses Node.js at the command line. Clone the repo to a directory then in your local IDE use command 'npm install' on comand line for the correct packages to install on your machine, then run the command 'node index.js' to check if dependencies are working with the command line questions generating the markdown file called 'readme.md'.",
       validate: (nameInput) => {
         if (nameInput) {
           return true;
@@ -83,8 +83,8 @@ const promptQuestions = () => {
       type: "input",
       name: "usage",
       message: "Please provide instructions for use.",
-      // default:
-      //   "Simply run 'node index.js' command at the command line and answer the questions until the readme.md file is created. Next, Preview the file by right-click on the readme.md file in VScode explorer and copy this file to any relavant project you may be working on.",
+      default:
+        "Simply run 'node index.js' command at the command line and answer the questions until the readme.md file is created. Next, Preview the file by right-click on the readme.md file in VScode explorer and copy this file to any relavant project you may be working on.",
       validate: (nameInput) => {
         if (nameInput) {
           return true;
@@ -98,7 +98,7 @@ const promptQuestions = () => {
       type: "input",
       name: "contributing",
       message: "Provide a link to guidelines for contributing to this project.",
-      // default: "https://www.contributor-covenant.org",
+      default: "https://www.contributor-covenant.org",
       validate: (nameInput) => {
         if (nameInput) {
           return true;
@@ -114,8 +114,8 @@ const promptQuestions = () => {
       type: "input",
       name: "tests",
       message: "Provide instructions for running tests.",
-      // default:
-      //   "To test this application, simply run 'node index' from the command line, answer question prompts, and if error follow error code instructions",
+      default:
+        "To test this application, simply run 'node index' from the command line, answer question prompts, and if error follow error code instructions",
       validate: (nameInput) => {
         if (nameInput) {
           return true;
@@ -159,9 +159,3 @@ promptQuestions().then((answersObj) => {
     );
   });
 });
-
-//   fs.appendFile("message.txt", "data to append", (err) => {
-//     if (err) throw err;
-//     console.log('The "data to append" was appended to file!');
-//   });
-// }

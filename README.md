@@ -14,7 +14,7 @@
 
  * <a href="#test">Testing</a>
 
- * <a href="#lic">License information</a>
+ * <a href="#cont">License information</a>
 
  * <a href="#cont">Contribute</a>
  
