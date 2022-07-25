@@ -28,6 +28,7 @@
   </br>
 
   <h2 id="inst"> Instructions for use:</h2>
+  <a href="https://drive.google.com/file/d/1YYvj70sEcOby1MBuB_sFCKjBmTSuQqc1/view">Watch video here</a>
   Simply run 'node index.js' command at the command line and answer the questions until the readme.md file is created. Next, Preview the file by right-click on the readme.md file in VScode explorer and copy this file to any relavant project you may be working on.
   
   </br>
